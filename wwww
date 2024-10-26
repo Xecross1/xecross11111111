@@ -1,0 +1,115 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "ตกปลาประทังชีวิต Xecross", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Tab = Window:MakeTab({
+	Name = "main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "เมนูฟาร์ม"
+})
+OrionLib:MakeNotification({
+	Name = "Title!",
+	Content = "Notification content... what will it say??",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+Tab:AddButton({
+	Name = "ขายปลาทั้งหมด",
+	Callback = function()
+      		workspace.world.npcs:FindFirstChild("Marc Merchant").merchant.sellall:InvokeServer()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "หย่อนเหยือ",
+	Callback = function()
+      		local args = {
+    [1] = 100
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Flimsy Rod").events.cast:FireServer(unpack(args))
+
+
+local args = {
+    [1] = 100,
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").events.reelfinished:FireServer(unpack(args))
+  	end    
+})
+
+Tab:AddButton({
+	Name = "ขายปลาหนึ่งตัว",
+	Callback = function()
+      		workspace.world.npcs:FindFirstChild("Marc Merchant").merchant.sell:InvokeServer()
+  	end    
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "วาร์ปเกาะ",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Moosewood",
+	Callback = function()
+      		local Tween = game:GetService("TweenService")
+
+local Tw = Tween:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0),
+{CFrame = CFrame.new(500.488434, 147.40181, 219.991364, -0.564704418, 0, -0.825293183, 0, 1, 0, 0.825293183, 0, -0.564704418)}):Play()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "ที่เอ็นชาตเบ็ด",
+	Callback = function()
+      		local Tween = game:GetService("TweenService")
+
+local Tw = Tween:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0),
+{CFrame = CFrame.new(1294.57568, -807.365051, -307.565216, 0.0331695676, 0, 0.99944973, 0, 1, 0, -0.99944973, 0, 0.0331695676)}):Play()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Roslit",
+	Callback = function()
+      		local Tween = game:GetService("TweenService")
+
+local Tw = Tween:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0),
+{CFrame = CFrame.new(-1510.43311, 129.750626, 615.421875, -1, 0, 0, 0, 1, 0, 0, 0, -1)}):Play()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Snowcap",
+	Callback = function()
+      		local Tween = game:GetService("TweenService")
+
+local Tw = Tween:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0),
+{CFrame = CFrame.new(2671.10767, 148.350555, 2388.95117, -0.464032531, -0.044061318, -0.884721994, -0.0204825327, 0.999028802, -0.0390110984, 0.885581613, 1.89337879e-05, -0.464484453)}):Play()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Sunstone",
+	Callback = function()
+      		local Tween = game:GetService("TweenService")
+
+local Tw = Tween:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0),
+{CFrame = CFrame.new(-902.682922, 136.266068, -1128.6886, 0.939700544, -0, -0.341998369, 0, 1, -0, 0.341998369, 0, 0.939700544)}):Play()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "ถ้ำใต้น้ำวน",
+	Callback = function()
+      		local Tween = game:GetService("TweenService")
+
+local Tw = Tween:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0),
+{CFrame = CFrame.new(-78.5218506, -482.720367, 1040.32788, -1, 0, 0, 0, 1, 0, 0, 0, -1)}):Play()
+  	end    
+})
